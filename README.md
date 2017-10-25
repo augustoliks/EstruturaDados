@@ -1,3 +1,5 @@
+EMENTA DA DISCIPLINA DE ESTRUTURA DE DADOS
+
 AULA 1:
 	Conceitos basicos de JAVA
 
