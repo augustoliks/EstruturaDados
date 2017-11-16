@@ -14,8 +14,8 @@ public class Hash {
 	/*
 	 * Converte a chave em um valor [0,m-1]. O valor retornado será a posição da
 	 * chave na tabela de dispersão. Essa função é chamada de função de
-	 * espalhamento, pois ela mapeia um valor (chave) do intervalo [0,R-1] para o
-	 * intervalo [0,m-1], onde m é menor que R
+	 * espalhamento, pois ela mapeia um valor (chave) do intervalo [0,R-1] para
+	 * o intervalo [0,m-1], onde m é menor que R
 	 */
 	public int hash(int ch) {
 		return ch % m;
@@ -23,8 +23,8 @@ public class Hash {
 
 	/*
 	 * As colisões na tabela de dispersão podem ser resolvidas usando listas
-	 * encadeadas: todas as chaves que têm um mesmo código hash são armazenadas na
-	 * lista
+	 * encadeadas: todas as chaves que têm um mesmo código hash são armazenadas
+	 * na lista
 	 */
 	public void inserir(String nome) {
 		/* cria um nó */
@@ -94,15 +94,15 @@ public class Hash {
 			ch *= -1;
 
 		}
-		
+
 		int hc = hash(ch);
 		No inicio = tabela[hc];
 		if (inicio != null) {
 			No aux = inicio.proximo;
 			if (inicio.chave == ch && inicio.nome.equals(nome)) {
-				JOptionPane.showMessageDialog(null,
-						"Nome encontrado!\n" + "Nome buscado: " + nome + "\n" + "Nome encontrado: " + inicio.nome + "\n"
-								+ "Chave: " + inicio.chave + "\n" + "Ocorrencias: " + inicio.ocorrencia + "\n");
+				System.out.println("Nome encontrado!\n" + "Nome buscado: " + nome + "\n" + "Nome encontrado: " + inicio.nome + "\n"
+						+ "Chave: " + inicio.chave + "\n" + "Ocorrencias: " + inicio.ocorrencia + "\n");
+						
 				encontrou = true;
 			} else {
 				while (aux != null && aux.chave != ch) {

@@ -32,7 +32,7 @@ public class Principal {
 				case "3" : {
 					System.out.println("Digite o nome para buscar: ");
 					hash.buscar(scan.next());
-
+					
 					break;
 				}
 				
